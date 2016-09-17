@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NSwag.Annotations</name>
+    </assembly>
+    <members>
+        <member name="T:NSwag.Annotations.ResponseTypeAttribute">
+            <summary>Specifies the result type of a web service method to correctly generate a Swagger definition.</summary>
+        </member>
+        <member name="M:NSwag.Annotations.ResponseTypeAttribute.#ctor(System.Type)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.Annotations.ResponseTypeAttribute"/> class.</summary>
+            <param name="responseType">The JSON result type of the MVC or Web API action method.</param>
+        </member>
+        <member name="M:NSwag.Annotations.ResponseTypeAttribute.#ctor(System.String,System.Type)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.Annotations.ResponseTypeAttribute"/> class.</summary>
+            <param name="httpStatusCode">The HTTP status code for which the result type applies.</param>
+            <param name="responseType">The JSON result type of the MVC or Web API action method.</param>
+        </member>
+        <member name="P:NSwag.Annotations.ResponseTypeAttribute.HttpStatusCode">
+            <summary>Gets or sets the HTTP status code for which the result type applies.</summary>
+        </member>
+        <member name="P:NSwag.Annotations.ResponseTypeAttribute.ResponseType">
+            <summary>Gets or sets the JSON result type of the MVC or Web API action method.</summary>
+        </member>
+        <member name="P:NSwag.Annotations.ResponseTypeAttribute.Description">
+            <summary>Gets or sets the description of the response.</summary>
+        </member>
+        <member name="T:NSwag.Annotations.SwaggerIgnoreAttribute">
+            <summary>Excludes an action method from the generated Swagger specification.</summary>
+        </member>
+        <member name="T:NSwag.Annotations.SwaggerOperationAttribute">
+            <summary>Specifies the operation .</summary>
+        </member>
+        <member name="M:NSwag.Annotations.SwaggerOperationAttribute.#ctor(System.String)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.Annotations.SwaggerOperationAttribute"/> class.</summary>
+            <param name="operationId">The operation ID.</param>
+        </member>
+        <member name="P:NSwag.Annotations.SwaggerOperationAttribute.OperationId">
+            <summary>Gets or sets the operation ID.</summary>
+        </member>
+        <member name="T:NSwag.Annotations.SwaggerOperationProcessorAttribute">
+            <summary>Registers an operation processor for the given method or class.</summary>
+            <seealso cref="T:System.Attribute" />
+        </member>
+        <member name="M:NSwag.Annotations.SwaggerOperationProcessorAttribute.#ctor(System.Type)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.Annotations.SwaggerOperationProcessorAttribute"/> class.</summary>
+            <param name="type">The type.</param>
+        </member>
+        <member name="P:NSwag.Annotations.SwaggerOperationProcessorAttribute.Type">
+            <summary>Gets or sets the type of the operation processor (must implement IOperationProcessor).</summary>
+        </member>
+        <member name="T:NSwag.Annotations.SwaggerTagsAttribute">
+            <summary>Specifies the tags for an operation.</summary>
+        </member>
+        <member name="M:NSwag.Annotations.SwaggerTagsAttribute.#ctor(System.String[])">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.Annotations.ResponseTypeAttribute"/> class.</summary>
+            <param name="tags">The tags.</param>
+        </member>
+        <member name="P:NSwag.Annotations.SwaggerTagsAttribute.Tags">
+            <summary>Gets the tags.</summary>
+        </member>
+    </members>
+</doc>

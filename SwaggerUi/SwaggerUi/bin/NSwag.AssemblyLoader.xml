@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NSwag.AssemblyLoader</name>
+    </assembly>
+    <members>
+        <member name="M:NSwag.CodeGeneration.Infrastructure.AppDomainIsolation`1.#ctor(System.String,System.String)">
+            <exception cref="T:System.ArgumentNullException"><paramref name="assemblyDirectory"/> is <see langword="null" />.</exception>
+        </member>
+        <member name="T:NSwag.CodeGeneration.SwaggerGenerators.AssemblyTypeToSwaggerGenerator">
+            <summary>Generates a <see cref="T:NSwag.SwaggerService"/> from a Web API controller or type which is located in a .NET assembly.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.AssemblyTypeToSwaggerGenerator.#ctor(NSwag.CodeGeneration.SwaggerGenerators.AssemblyTypeToSwaggerGeneratorSettings)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.SwaggerGenerators.AssemblyTypeToSwaggerGenerator" /> class.</summary>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.AssemblyTypeToSwaggerGenerator.Settings">
+            <summary>Gets or sets the generator settings.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.AssemblyTypeToSwaggerGenerator.GetClasses">
+            <summary>Gets the available controller classes from the given assembly.</summary>
+            <returns>The controller classes.</returns>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.AssemblyTypeToSwaggerGenerator.Generate(System.String[])">
+            <summary>Generates the Swagger definition for the given classes without operations (used for class generation).</summary>
+            <param name="classNames">The class names.</param>
+            <returns>The Swagger definition.</returns>
+        </member>
+        <member name="T:NSwag.CodeGeneration.SwaggerGenerators.AssemblyTypeToSwaggerGeneratorSettings">
+            <summary>Settings for the <see cref="T:NSwag.CodeGeneration.SwaggerGenerators.AssemblyTypeToSwaggerGenerator"/>.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.AssemblyTypeToSwaggerGeneratorSettings.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.SwaggerGenerators.AssemblyTypeToSwaggerGeneratorSettings"/> class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.AssemblyTypeToSwaggerGeneratorSettings.AssemblyPath">
+            <summary>Gets or sets the assembly path.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.AssemblyTypeToSwaggerGeneratorSettings.AssemblyConfig">
+            <summary>Gets or sets the path to the assembly App.config or Web.config (optional).</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.AssemblyTypeToSwaggerGeneratorSettings.ReferencePaths">
+            <summary>Gets ot sets the paths where to search for referenced assemblies</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGenerator">
+            <summary>Generates a <see cref="T:NSwag.SwaggerService"/> from a Web API controller or type which is located in a .NET assembly.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGenerator.#ctor(NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGeneratorSettings)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGenerator" /> class.</summary>
+            <param name="settings">The generator settings.</param>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGenerator.Settings">
+            <summary>Gets or sets the generator settings.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGenerator.GetControllerClasses">
+            <summary>Gets the available controller classes from the given assembly.</summary>
+            <returns>The controller classes.</returns>
+            <exception cref="T:System.IO.FileNotFoundException">The assembly could not be found.</exception>
+            <exception cref="T:System.IO.FileNotFoundException">The assembly config file could not be found..</exception>
+            <exception cref="T:System.InvalidOperationException">No assembly paths have been provided.</exception>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGenerator.GenerateForController(System.String)">
+            <summary>Generates the Swagger definition for the given controller.</summary>
+            <param name="controllerClassName">The full name of the controller class.</param>
+            <returns>The Swagger definition.</returns>
+            <exception cref="T:System.InvalidOperationException">No assembly paths have been provided.</exception>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGenerator.GenerateForControllers(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>Generates the Swagger definition for all controllers in the assembly.</summary>
+            <param name="controllerClassNames">The controller class names.</param>
+            <exception cref="T:System.InvalidOperationException">No assembly paths have been provided.</exception>
+            <returns>The Swagger definition.</returns>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGenerator.WebApiAssemblyLoader.GenerateForController(System.String,System.String)">
+            <exception cref="T:System.InvalidOperationException">No assembly paths have been provided.</exception>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGenerator.WebApiAssemblyLoader.GenerateForControllers(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <exception cref="T:System.InvalidOperationException">No assembly paths have been provided.</exception>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGenerator.WebApiAssemblyLoader.GetControllerTypes(System.Collections.Generic.IEnumerable{System.String},NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGeneratorSettings)">
+            <exception cref="T:System.InvalidOperationException">No assembly paths have been provided.</exception>
+        </member>
+        <member name="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGeneratorSettings">
+            <summary>Settings for the <see cref="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGenerator"/>.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGeneratorSettings.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGeneratorSettings"/> class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGeneratorSettings.AssemblyPaths">
+            <summary>Gets or sets the Web API assembly paths.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGeneratorSettings.AssemblyConfig">
+            <summary>Gets or sets the path to the assembly App.config or Web.config (optional).</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGeneratorSettings.ReferencePaths">
+            <summary>Gets ot sets the paths where to search for referenced assemblies</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiAssemblyToSwaggerGeneratorSettings.AllReferencePaths">
+            <summary>Gets all reference paths.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.Utilities.PathUtilities">
+            <summary>Provides file path utility methods.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.Utilities.PathUtilities.ExpandFileWildcards(System.String)">
+            <summary>Expands the given wildcards (** or *) in the path.</summary>
+            <param name="path">The file path with wildcards.</param>
+            <returns>All expanded file paths.</returns>
+        </member>
+        <member name="M:NSwag.CodeGeneration.Utilities.PathUtilities.ExpandFileWildcards(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>Expands the given wildcards (** or *) in the paths.</summary>
+            <param name="paths">The files path with wildcards.</param>
+            <returns>All expanded file paths.</returns>
+        </member>
+        <member name="M:NSwag.CodeGeneration.Utilities.PathUtilities.MakeAbsolutePath(System.String,System.String)">
+            <summary>Converts a relative path to an absolute path.</summary>
+            <param name="relativePath">The relative path.</param>
+            <param name="relativeTo">The current directory.</param>
+            <returns>The absolute path.</returns>
+        </member>
+        <member name="M:NSwag.CodeGeneration.Utilities.PathUtilities.MakeRelativePath(System.String,System.String)">
+            <summary>Converts an absolute path to a relative path if possible.</summary>
+            <param name="absolutePath">The absolute path.</param>
+            <param name="relativeTo">The current directory.</param>
+            <returns>The relative path.</returns>
+            <exception cref="T:System.ArgumentException">The path of the two files doesn't have any common base.</exception>
+        </member>
+    </members>
+</doc>

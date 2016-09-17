@@ -1,0 +1,1816 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NSwag.CodeGeneration</name>
+    </assembly>
+    <members>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorOutputType">
+            <summary>Specifies the output type.</summary>
+        </member>
+        <member name="F:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorOutputType.Full">
+            <summary>A single output with contracts and implementation.</summary>
+        </member>
+        <member name="F:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorOutputType.Contracts">
+            <summary>The contracts output.</summary>
+        </member>
+        <member name="F:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorOutputType.Implementation">
+            <summary>The implementation output.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.ControllerGeneratorBaseSettings">
+            <summary>Settings for the <see cref="T:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBase"/>.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.ControllerGeneratorBaseSettings.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBaseSettings"/> class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.ControllerGeneratorBaseSettings.GenerateDtoTypes">
+            <summary>Gets or sets a value indicating whether to generate DTO classes (default: true).</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.FileTemplateModel">
+            <summary>The CSharp file template model.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.FileTemplateModel.#ctor(System.String,NSwag.CodeGeneration.CodeGenerators.ClientGeneratorOutputType,NSwag.SwaggerService,NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpGeneratorSettings,NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpTypeResolver)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.FileTemplateModel" /> class.</summary>
+            <param name="clientCode"></param>
+            <param name="outputType"></param>
+            <param name="service">The service.</param>
+            <param name="settings">The settings.</param>
+            <param name="resolver">The resolver.</param>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.FileTemplateModel.Namespace">
+            <summary>Gets the namespace.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.FileTemplateModel.NamespaceUsages">
+            <summary>Gets the all the namespace usages.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.FileTemplateModel.GenerateContracts">
+            <summary>Gets a value indicating whether to generate contract code.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.FileTemplateModel.GenerateImplementation">
+            <summary>Gets a value indicating whether to generate implementation code.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.FileTemplateModel.Clients">
+            <summary>Gets the clients code.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.FileTemplateModel.Classes">
+            <summary>Gets the classes code.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.FileTemplateModel.HasMissingHttpMethods">
+            <summary>Gets a value indicating whether missing HTTP methods are used.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ControllerTemplateModel">
+            <summary>The CSharp controller template model.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ControllerTemplateModel.#ctor(NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpWebApiControllerGeneratorSettings)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ControllerTemplateModel"/> class.</summary>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ControllerTemplateModel.Class">
+            <summary>Gets or sets the class name.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ControllerTemplateModel.HasBaseClass">
+            <summary>Gets a value indicating whether the controller has a base class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ControllerTemplateModel.BaseClass">
+            <summary>Gets the base class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ControllerTemplateModel.BaseUrl">
+            <summary>Gets or sets the service base URL.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ControllerTemplateModel.HasOperations">
+            <summary>Gets or sets a value indicating whether the controller has operations.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ControllerTemplateModel.Operations">
+            <summary>Gets or sets the operations.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel">
+            <summary>The CSharp client template model.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel.#ctor(System.String,System.Collections.Generic.IList{NSwag.CodeGeneration.CodeGenerators.Models.OperationModel},NSwag.SwaggerService,NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGeneratorSettings)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel" /> class.</summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="operations">The operations.</param>
+            <param name="service">The service.</param>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel.GenerateContracts">
+            <summary>Gets or sets a value indicating whether to generate client contracts (i.e. client interfaces).</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel.GenerateImplementation">
+            <summary>Gets or sets a value indicating whether to generate implementation classes.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel.Class">
+            <summary>Gets the class name.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel.BaseClass">
+            <summary>Gets the base class name.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel.HasBaseClass">
+            <summary>Gets a value indicating whether the client has a base class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel.HasConfigurationClass">
+            <summary>Gets a value indicating whether the client has configuration class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel.ConfigurationClass">
+            <summary>Gets the configuration class name.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel.HasBaseType">
+            <summary>Gets a value indicating whether the client has a base type.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel.UseHttpClientCreationMethod">
+            <summary>Gets a value indicating whether to use a HTTP client creation method.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel.GenerateClientInterfaces">
+            <summary>Gets a value indicating whether to generate client interfaces.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel.BaseUrl">
+            <summary>Gets the service base URL.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel.HasOperations">
+            <summary>Gets a value indicating whether the client has operations.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Models.ClientTemplateModel.Operations">
+            <summary>Gets the operations.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGeneratorSettings">
+            <summary>Settings for the <see cref="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGenerator"/>.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGeneratorSettings.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGeneratorSettings"/> class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGeneratorSettings.ClientBaseClass">
+            <summary>Gets or sets the full name of the base class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGeneratorSettings.ConfigurationClass">
+            <summary>Gets or sets the full name of the configuration class (<see cref="P:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGeneratorSettings.ClientBaseClass"/> must be set).</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGeneratorSettings.UseHttpClientCreationMethod">
+            <summary>Gets or sets a value indicating whether to call CreateHttpClientAsync on the base class to create a new HttpClient instance.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpGeneratorBase">
+            <summary>The CSharp generator base class.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpGeneratorSettings">
+            <summary>Settings for the <see cref="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpGeneratorBase"/>.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpGeneratorSettings.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGeneratorSettings"/> class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpGeneratorSettings.CSharpGeneratorSettings">
+            <summary>Gets or sets the CSharp generator settings.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpGeneratorSettings.AdditionalNamespaceUsages">
+            <summary>Gets or sets the additional namespace usages.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpGeneratorSettings.CodeGeneratorSettings">
+            <summary>Gets the code generator settings.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpTypeResolver">
+            <summary>A resolver which returns Exception without generating the class (uses System.Exception instead of own class).</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpTypeResolver.#ctor(NJsonSchema.CodeGeneration.CSharp.CSharpGeneratorSettings,NJsonSchema.JsonSchema4)">
+            <summary>Initializes a new instance of the <see cref="T:NJsonSchema.CodeGeneration.CSharp.CSharpTypeResolver" /> class.</summary>
+            <param name="settings">The generator settings.</param>
+            <param name="exceptionSchema">The exception type schema.</param>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpTypeResolver.Resolve(NJsonSchema.JsonSchema4,System.Boolean,System.String)">
+            <summary>Resolves and possibly generates the specified schema.</summary>
+            <param name="schema">The schema.</param>
+            <param name="isNullable">Specifies whether the given type usage is nullable.</param>
+            <param name="typeNameHint">The type name hint to use when generating the type and the type name is missing.</param>
+            <returns>The type name.</returns>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplate">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplate.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ClientTemplateBase.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplate">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplate.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.FileTemplateBase.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ControllerTemplate">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.ControllerTemplate.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.Templates.WebApiControllerTemplateBase.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGenerator">
+            <summary>Generates the CSharp service client code. </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGenerator.#ctor(NSwag.SwaggerService,NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGeneratorSettings)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGenerator" /> class.</summary>
+            <param name="service">The service.</param>
+            <param name="settings">The settings.</param>
+            <exception cref="T:System.ArgumentNullException">service</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="service" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGenerator.Settings">
+            <summary>Gets or sets the generator settings.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGenerator.Language">
+            <summary>Gets the language.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGenerator.GenerateFile">
+            <summary>Generates the file.</summary>
+            <returns>The file contents.</returns>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGenerator.GenerateFile(NSwag.CodeGeneration.CodeGenerators.ClientGeneratorOutputType)">
+            <summary>Generates the the whole file containing all needed types.</summary>
+            <param name="outputType">The output type.</param>
+            <returns>The code</returns>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpClientGenerator.ResolveParameterType(NSwag.SwaggerParameter,NJsonSchema.CodeGeneration.ITypeResolver)">
+            <summary>Resolves the type of the parameter.</summary>
+            <param name="parameter">The parameter.</param>
+            <param name="resolver">The resolver.</param>
+            <returns>The parameter type name.</returns>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpWebApiControllerGenerator">
+            <summary>Generates the CSharp service client code. </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpWebApiControllerGenerator.#ctor(NSwag.SwaggerService,NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpWebApiControllerGeneratorSettings)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpWebApiControllerGenerator" /> class.</summary>
+            <param name="service">The service.</param>
+            <param name="settings">The settings.</param>
+            <exception cref="T:System.ArgumentNullException">service</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="service" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpWebApiControllerGenerator.Settings">
+            <summary>Gets or sets the generator settings.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpWebApiControllerGenerator.Language">
+            <summary>Gets the language.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpWebApiControllerGenerator.GenerateFile">
+            <summary>Generates the file.</summary>
+            <returns>The file contents.</returns>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpWebApiControllerGeneratorSettings">
+            <summary>Settings for the <see cref="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpWebApiControllerGenerator"/>.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpWebApiControllerGeneratorSettings.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpWebApiControllerGeneratorSettings"/> class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.CSharp.SwaggerToCSharpWebApiControllerGeneratorSettings.ControllerBaseClass">
+            <summary>Gets or sets the full name of the base class.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.IOperationNameGenerator">
+            <summary>Generates the client and operation name for a given operation.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.IOperationNameGenerator.SupportsMultipleClients">
+            <summary>Gets a value indicating whether the generator supports multiple client classes.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.IOperationNameGenerator.GetClientName(NSwag.SwaggerService,System.String,NSwag.SwaggerOperationMethod,NSwag.SwaggerOperation)">
+            <summary>Gets the client name for a given operation.</summary>
+            <param name="service">The Swagger service.</param>
+            <param name="path">The HTTP path.</param>
+            <param name="httpMethod">The HTTP method.</param>
+            <param name="operation">The operation.</param>
+            <returns>The client name.</returns>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.IOperationNameGenerator.GetOperationName(NSwag.SwaggerService,System.String,NSwag.SwaggerOperationMethod,NSwag.SwaggerOperation)">
+            <summary>Gets the operation name for a given operation.</summary>
+            <param name="service">The Swagger service.</param>
+            <param name="path">The HTTP path.</param>
+            <param name="httpMethod">The HTTP method.</param>
+            <param name="operation">The operation.</param>
+            <returns>The operation name.</returns>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.MultipleClientsFromOperationIdOperationNameGenerator">
+            <summary>Generates multiple clients and operation names based on the Swagger operation ID (underscore separated).</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.MultipleClientsFromOperationIdOperationNameGenerator.SupportsMultipleClients">
+            <summary>Gets a value indicating whether the generator supports multiple client classes.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.MultipleClientsFromOperationIdOperationNameGenerator.GetClientName(NSwag.SwaggerService,System.String,NSwag.SwaggerOperationMethod,NSwag.SwaggerOperation)">
+            <summary>Gets the client name for a given operation.</summary>
+            <param name="service">The Swagger service.</param>
+            <param name="path">The HTTP path.</param>
+            <param name="httpMethod">The HTTP method.</param>
+            <param name="operation">The operation.</param>
+            <returns>The client name.</returns>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.MultipleClientsFromOperationIdOperationNameGenerator.GetOperationName(NSwag.SwaggerService,System.String,NSwag.SwaggerOperationMethod,NSwag.SwaggerOperation)">
+            <summary>Gets the operation name for a given operation.</summary>
+            <param name="service">The Swagger service.</param>
+            <param name="path">The HTTP path.</param>
+            <param name="httpMethod">The HTTP method.</param>
+            <param name="operation">The operation.</param>
+            <returns>The operation name.</returns>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.MultipleClientsFromPathSegmentsOperationNameGenerator">
+            <summary>Generates the client and operation name based on the path segments (operation name = last segment, client name = second to last segment).</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.MultipleClientsFromPathSegmentsOperationNameGenerator.SupportsMultipleClients">
+            <summary>Gets a value indicating whether the generator supports multiple client classes.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.MultipleClientsFromPathSegmentsOperationNameGenerator.GetClientName(NSwag.SwaggerService,System.String,NSwag.SwaggerOperationMethod,NSwag.SwaggerOperation)">
+            <summary>Gets the client name for a given operation.</summary>
+            <param name="service">The Swagger service.</param>
+            <param name="path">The HTTP path.</param>
+            <param name="httpMethod">The HTTP method.</param>
+            <param name="operation">The operation.</param>
+            <returns>The client name.</returns>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.MultipleClientsFromPathSegmentsOperationNameGenerator.GetOperationName(NSwag.SwaggerService,System.String,NSwag.SwaggerOperationMethod,NSwag.SwaggerOperation)">
+            <summary>Gets the client name for a given operation.</summary>
+            <param name="service">The Swagger service.</param>
+            <param name="path">The HTTP path.</param>
+            <param name="httpMethod">The HTTP method.</param>
+            <param name="operation">The operation.</param>
+            <returns>The client name.</returns>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.SingleClientFromOperationIdOperationNameGenerator">
+            <summary>Generates the client and operation name based on the Swagger operation ID.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.SingleClientFromOperationIdOperationNameGenerator.SupportsMultipleClients">
+            <summary>Gets a value indicating whether the generator supports multiple client classes.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.SingleClientFromOperationIdOperationNameGenerator.GetClientName(NSwag.SwaggerService,System.String,NSwag.SwaggerOperationMethod,NSwag.SwaggerOperation)">
+            <summary>Gets the client name for a given operation.</summary>
+            <param name="service">The Swagger service.</param>
+            <param name="path">The HTTP path.</param>
+            <param name="httpMethod">The HTTP method.</param>
+            <param name="operation">The operation.</param>
+            <returns>The client name.</returns>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.OperationNameGenerators.SingleClientFromOperationIdOperationNameGenerator.GetOperationName(NSwag.SwaggerService,System.String,NSwag.SwaggerOperationMethod,NSwag.SwaggerOperation)">
+            <summary>Gets the client name for a given operation.</summary>
+            <param name="service">The Swagger service.</param>
+            <param name="path">The HTTP path.</param>
+            <param name="httpMethod">The HTTP method.</param>
+            <param name="operation">The operation.</param>
+            <returns>The client name.</returns>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel">
+            <summary>The Swagger operation template model.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.Operation">
+            <summary>Gets or sets the operation.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.Id">
+            <summary>Gets the operation ID.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.Path">
+            <summary>Gets or sets the HTTP path (i.e. the absolute route).</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.HttpMethod">
+            <summary>Gets or sets the HTTP method.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.OperationName">
+            <summary>Gets or sets the name of the operation.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.HttpMethodUpper">
+            <summary>Gets the HTTP method in uppercase.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.HttpMethodLower">
+            <summary>Gets the HTTP method in lowercase.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.IsGetOrDelete">
+            <summary>Gets a value indicating whether the HTTP method is GET or DELETE.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.OperationNameLower">
+            <summary>Gets the operation name in lowercase.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.OperationNameUpper">
+            <summary>Gets the operation name in uppercase.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.HasResultType">
+            <summary>Gets or sets a value indicating whether the operation has a result type (i.e. not void).</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.ResultType">
+            <summary>Gets or sets the type of the result.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.HasResultDescription">
+            <summary>Gets a value indicating whether the result has description.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.ResultDescription">
+            <summary>Gets or sets the result description.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.ExceptionType">
+            <summary>Gets or sets the type of the exception.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.Responses">
+            <summary>Gets or sets the responses.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.HasDefaultResponse">
+            <summary>Gets a value indicating whether the operation has default response.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.DefaultResponse">
+            <summary>Gets or sets the default response.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.Parameters">
+            <summary>Gets or sets the parameters.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.HasOnlyDefaultResponse">
+            <summary>Gets a value indicating whether the operation has only a default response.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.HasContent">
+            <summary>Gets a value indicating whether the operation has content parameter.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.ContentParameter">
+            <summary>Gets the content parameter.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.PathParameters">
+            <summary>Gets the path parameters.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.QueryParameters">
+            <summary>Gets the query parameters.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.HeaderParameters">
+            <summary>Gets the header parameters.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.HasFormParameters">
+            <summary>Gets or sets a value indicating whether the operation has form parameters.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.FormParameters">
+            <summary>Gets the form parameters.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.HasSummary">
+            <summary>Gets a value indicating whether the operation has summary.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.Summary">
+            <summary>Gets the summary text.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.HasDocumentation">
+            <summary>Gets a value indicating whether the operation has any documentation.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.OperationModel.IsDeprecated">
+            <summary>Gets a value indicating whether the operation is deprecated.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel">
+            <summary>The parameter template model.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.#ctor(System.String,NSwag.SwaggerOperation,NSwag.SwaggerParameter,NJsonSchema.CodeGeneration.CodeGeneratorSettingsBase)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel" /> class.</summary>
+            <param name="typeName">The type name.</param>
+            <param name="operation">The operation.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.Type">
+            <summary>Gets the type of the parameter.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.Name">
+            <summary>Gets the name.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.VariableNameLower">
+            <summary>Gets the variable name in lowercase.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.Kind">
+            <summary>Gets the parameter kind.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.HasDescription">
+            <summary>Gets a value indicating whether the parameter has a description.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.Description">
+            <summary>Gets the parameter description.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.Schema">
+            <summary>Gets the schema.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.IsRequired">
+            <summary>Gets a value indicating whether the parameter is required.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.IsNullable">
+            <summary>Gets a value indicating whether the parameter is nullable.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.IsOptional">
+            <summary>Gets a value indicating whether the parameter is optional (i.e. not required).</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.HasDescriptionOrIsOptional">
+            <summary>Gets a value indicating whether the parameter has a description or is optional.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.IsLast">
+            <summary>Gets a value indicating whether the parameter is the last parameter of the operation.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.IsDate">
+            <summary>Gets a value indicating whether the parameter is of type date.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.IsArray">
+            <summary>Gets a value indicating whether the parameter is of type array.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.IsFile">
+            <summary>Gets a value indicating whether this is a file parameter.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.IsDictionary">
+            <summary>Gets a value indicating whether the parameter is of type dictionary.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.IsDateArray">
+            <summary>Gets a value indicating whether the parameter is of type date array.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel.UseDtoClass">
+            <summary>Gets or sets a value indicating whether to use a DTO class.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel">
+            <summary>The response template model.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel.#ctor(System.Collections.Generic.KeyValuePair{System.String,NSwag.SwaggerResponse},NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBase)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel" /> class.</summary>
+            <param name="response">The response.</param>
+            <param name="clientGeneratorBase">The client generator base.</param>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel.StatusCode">
+            <summary>Gets the HTTP status code.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel.Type">
+            <summary>Gets the type of the response.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel.HasType">
+            <summary>Gets a value indicating whether the response has a type (i.e. not void).</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel.IsSuccess">
+            <summary>Gets a value indicating whether this is success response.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel.IsDate">
+            <summary>Gets a value indicating whether the response is of type date.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel.IsFile">
+            <summary>Gets a value indicating whether this is a file response.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel.ActualResponseSchema">
+            <summary>Gets the actual response schema.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel.Schema">
+            <summary>Gets the schema.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel.IsNullable">
+            <summary>Gets a value indicating whether the response is nullable.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel.TypeInheritsFromException">
+            <summary>Gets a value indicating whether the response type inherits from exception.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel.DataConversionCode">
+            <summary>Gets or sets the data conversion code.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.Models.ResponseModel.UseDtoClass">
+            <summary>Gets or sets a value indicating whether to use a DTO class.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBase">
+            <summary>The client generator base.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBase.ResolveParameterType(NSwag.SwaggerParameter,NJsonSchema.CodeGeneration.ITypeResolver)">
+            <summary>Resolves the type of the parameter.</summary>
+            <param name="parameter">The parameter.</param>
+            <param name="resolver">The resolver.</param>
+            <returns>The parameter type name.</returns>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.OperationGenerationMode">
+            <summary>Specifies how the operation name and client classes/interfaces are generated.</summary>
+        </member>
+        <member name="F:NSwag.CodeGeneration.CodeGenerators.OperationGenerationMode.MultipleClientsFromOperationId">
+            <summary>Multiple clients from the Swagger operation ID in the form '{controller}_{action}'.</summary>
+        </member>
+        <member name="F:NSwag.CodeGeneration.CodeGenerators.OperationGenerationMode.MultipleClientsFromPathSegments">
+            <summary>From path segments (operation name = last segment, client name = second to last segment).</summary>
+        </member>
+        <member name="F:NSwag.CodeGeneration.CodeGenerators.OperationGenerationMode.SingleClientFromOperationId">
+            <summary>From the Swagger operation ID.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBaseSettings">
+            <summary>Settings for the <see cref="T:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBase"/>.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBaseSettings.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBaseSettings"/> class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBaseSettings.CodeGeneratorSettings">
+            <summary>Gets the code generator settings.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBaseSettings.ClassName">
+            <summary>Gets or sets the class name of the service client or controller.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBaseSettings.OperationGenerationMode">
+            <summary>Gets or sets the operation generation mode.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBaseSettings.GenerateDtoTypes">
+            <summary>Gets or sets a value indicating whether to generate DTO classes (default: true).</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBaseSettings.GenerateClientInterfaces">
+            <summary>Gets or sets a value indicating whether to generate interfaces for the client classes.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBaseSettings.GenerateClientClasses">
+            <summary>Gets or sets a value indicating whether to generate client types (default: true).</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.ClientGeneratorBaseSettings.OperationNameGenerator">
+            <exception cref="T:System.NotSupportedException" accessor="get">The OperationGenerationMode is not supported.</exception>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.FileTemplateModel">
+            <summary>The TypeScript file template model.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.FileTemplateModel.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String},NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGeneratorSettings,NJsonSchema.CodeGeneration.TypeScript.TypeScriptTypeResolver)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.FileTemplateModel"/> class.</summary>
+            <param name="clientCode">The client code.</param>
+            <param name="clientClasses">The client classes.</param>
+            <param name="settings">The settings.</param>
+            <param name="resolver">The resolver.</param>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.FileTemplateModel.IsAngular2">
+            <summary>Gets a value indicating whether the generated code is for Angular 2.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.FileTemplateModel.Clients">
+            <summary>Gets the clients code.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.FileTemplateModel.Types">
+            <summary>Gets the types code.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.FileTemplateModel.ExtensionCodeBefore">
+            <summary>Gets or sets the extension code to insert at the beginning.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.FileTemplateModel.ExtensionCodeAfter">
+            <summary>Gets or sets the extension code to insert at the end.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.FileTemplateModel.HasModuleName">
+            <summary>Gets a value indicating whether the file has module name.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.FileTemplateModel.ModuleName">
+            <summary>Gets the name of the module.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.FileTemplateModel.HasNamespace">
+            <summary>Gets a value indicating whether the file has a namespace.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.FileTemplateModel.Namespace">
+            <summary>Gets the namespace.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.FileTemplateModel.ClientClasses">
+            <summary>Table containing list of the generated classes.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.ClientTemplateModel">
+            <summary>The TypeScript client template model.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.ClientTemplateModel.#ctor(System.String,System.Collections.Generic.IList{NSwag.CodeGeneration.CodeGenerators.Models.OperationModel},NSwag.SwaggerService,NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGeneratorSettings)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.ClientTemplateModel" /> class.</summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="operations">The operations.</param>
+            <param name="service">The service.</param>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.ClientTemplateModel.Class">
+            <summary>Gets the class name.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.ClientTemplateModel.IsExtended">
+            <summary>Gets a value indicating whether the client is extended with an extension class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.ClientTemplateModel.HasOperations">
+            <summary>Gets a value indicating whether the client has operations.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.ClientTemplateModel.Operations">
+            <summary>Gets the operations.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.ClientTemplateModel.UsesKnockout">
+            <summary>Gets a value indicating whether the client uses KnockoutJS.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.ClientTemplateModel.BaseUrl">
+            <summary>Gets the service base URL.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.ClientTemplateModel.GenerateClientInterfaces">
+            <summary>Gets a value indicating whether to generate client interfaces.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.ClientTemplateModel.PromiseType">
+            <summary>Gets the promise type.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Models.ClientTemplateModel.PromiseConstructor">
+            <summary>Gets the promise constructor code.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.PromiseType">
+            <summary>The promise type.</summary>
+        </member>
+        <member name="F:NSwag.CodeGeneration.CodeGenerators.TypeScript.PromiseType.Promise">
+            <summary>The standard promise implementation (polyfill may be required).</summary>
+        </member>
+        <member name="F:NSwag.CodeGeneration.CodeGenerators.TypeScript.PromiseType.QPromise">
+            <summary>Promise from the Q promises library.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGeneratorSettings">
+            <summary>Settings for the <see cref="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGenerator"/>.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGeneratorSettings.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGeneratorSettings"/> class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGeneratorSettings.TypeScriptGeneratorSettings">
+            <summary>Gets or sets the TypeScript generator settings.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGeneratorSettings.CodeGeneratorSettings">
+            <summary>Gets the code generator settings.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGeneratorSettings.Template">
+            <summary>Gets or sets the output template.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGeneratorSettings.PromiseType">
+            <summary>Gets or sets the promise type.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplate">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplate.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.Angular2ClientTemplateBase.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplate">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplate.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.AngularJSClientTemplateBase.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplate">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplate.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.FileTemplateBase.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplate">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplate.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryCallbacksClientTemplateBase.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplate">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplate.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.JQueryPromisesClientTemplateBase.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplate">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplate.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplateBase.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.RequestBodyGenerator">
+            <summary>It generates request body using <see cref="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.Templates.RequestBodyTemplate"/></summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.RequestBodyGenerator.Render(NSwag.CodeGeneration.CodeGenerators.Models.ParameterModel,System.Int32)">
+            <summary>Renders the reqeust body.</summary>
+            <param name="model">The model.</param>
+            <param name="tabCount">The tab count.</param>
+            <returns>Rendered request body</returns>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.TypeScriptTemplate">
+            <summary>The TypeScript output templates.</summary>
+        </member>
+        <member name="F:NSwag.CodeGeneration.CodeGenerators.TypeScript.TypeScriptTemplate.JQueryCallbacks">
+            <summary>Uses JQuery with callbacks.</summary>
+        </member>
+        <member name="F:NSwag.CodeGeneration.CodeGenerators.TypeScript.TypeScriptTemplate.JQueryPromises">
+            <summary>Uses JQuery with Promises/A+.</summary>
+        </member>
+        <member name="F:NSwag.CodeGeneration.CodeGenerators.TypeScript.TypeScriptTemplate.AngularJS">
+            <summary>Uses $http from AngularJS 1.x.</summary>
+        </member>
+        <member name="F:NSwag.CodeGeneration.CodeGenerators.TypeScript.TypeScriptTemplate.Angular2">
+            <summary>Uses the http service from AngularJS 2.x.</summary>
+        </member>
+        <member name="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGenerator">
+            <summary>Generates the CSharp service client code. </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGenerator.#ctor(NSwag.SwaggerService,NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGeneratorSettings)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGenerator" /> class.</summary>
+            <param name="service">The service.</param>
+            <param name="settings">The settings.</param>
+            <exception cref="T:System.ArgumentNullException">service</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="service" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGenerator.Settings">
+            <summary>Gets or sets the generator settings.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGenerator.Language">
+            <summary>Gets the language.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.CodeGenerators.TypeScript.SwaggerToTypeScriptClientGenerator.GenerateFile">
+            <summary>Generates the file.</summary>
+            <returns>The file contents.</returns>
+        </member>
+        <member name="T:NSwag.CodeGeneration.SwaggerGenerators.SwaggerJsonSchemaGenerator">
+            <summary>A <see cref="T:NJsonSchema.Generation.JsonSchemaGenerator"/> which only generate the schema for the root type. 
+            Referenced types are added to the service's Definitions collection. </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.SwaggerJsonSchemaGenerator.#ctor(NJsonSchema.Generation.JsonSchemaGeneratorSettings)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.SwaggerGenerators.SwaggerJsonSchemaGenerator" /> class.</summary>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.SwaggerJsonSchemaGenerator.GenerateObject``1(System.Type,``0,NJsonSchema.ISchemaResolver,NJsonSchema.ISchemaDefinitionAppender)">
+            <summary>Generates the properties for the given type and schema.</summary>
+            <typeparam name="TSchemaType">The type of the schema type.</typeparam>
+            <param name="type">The types.</param>
+            <param name="schema">The properties</param>
+            <param name="schemaResolver"></param>
+            <param name="schemaDefinitionAppender"></param>
+        </member>
+        <member name="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.Processors.IDocumentProcessor">
+            <summary>Post processes a generated <see cref="T:NSwag.SwaggerService"/>.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.Processors.IDocumentProcessor.Process(NSwag.SwaggerService)">
+            <summary>Processes the specified Swagger document.</summary>
+            <param name="document">The document.</param>
+        </member>
+        <member name="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.Processors.IOperationProcessor">
+            <summary>Post processes a generated <see cref="T:NSwag.SwaggerOperation"/>.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.Processors.IOperationProcessor.Process(NSwag.SwaggerOperationDescription,System.Reflection.MethodInfo,NJsonSchema.ISchemaResolver,System.Collections.Generic.IList{NSwag.SwaggerOperationDescription})">
+            <summary>Processes the specified method information.</summary>
+            <param name="operationDescription">The operation description.</param>
+            <param name="methodInfo">The method information.</param>
+            <param name="schemaResolver">The schema resolver.</param>
+            <param name="allOperationDescriptions">All operation descriptions.</param>
+            <returns>true if the operation should be added to the Swagger specification.</returns>
+        </member>
+        <member name="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.Processors.SecurityDefinitionAppender">
+            <summary>Appends the OAuth2 security scheme to the document's security definitions.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.Processors.SecurityDefinitionAppender.#ctor(System.String,NSwag.SwaggerSecurityScheme)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.Processors.SecurityDefinitionAppender" /> class.</summary>
+            <param name="name">The name/key of the security scheme/definition.</param>
+            <param name="swaggerSecurityScheme">The Swagger security scheme.</param>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.Processors.SecurityDefinitionAppender.Process(NSwag.SwaggerService)">
+            <summary>Processes the specified Swagger document.</summary>
+            <param name="document">The document.</param>
+        </member>
+        <member name="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.Processors.OperationSecurityScopeAppender">
+            <summary>Generates the OAuth2 security scopes for an operation by reflecting the AuthorizeAttribute attributes.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.Processors.OperationSecurityScopeAppender.#ctor(System.String)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.Processors.OperationSecurityScopeAppender"/> class.</summary>
+            <param name="name">The security definition name.</param>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.Processors.OperationSecurityScopeAppender.Process(NSwag.SwaggerOperationDescription,System.Reflection.MethodInfo,NJsonSchema.ISchemaResolver,System.Collections.Generic.IList{NSwag.SwaggerOperationDescription})">
+            <summary>Processes the specified method information.</summary>
+            <param name="operationDescription">The operation description.</param>
+            <param name="methodInfo">The method information.</param>
+            <param name="schemaResolver">The schema resolver.</param>
+            <param name="allOperationDescriptions">All operation descriptions.</param>
+            <returns>true if the operation should be added to the Swagger specification.</returns>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.Processors.OperationSecurityScopeAppender.GetScopes(NSwag.SwaggerOperationDescription,System.Reflection.MethodInfo,NJsonSchema.ISchemaResolver,System.Collections.Generic.IList{NSwag.SwaggerOperationDescription})">
+            <summary>Gets the security scopes for an operation.</summary>
+            <param name="operationDescription">The operation description.</param>
+            <param name="methodInfo">The method information.</param>
+            <param name="schemaResolver">The schema resolver.</param>
+            <param name="allOperationDescriptions">All operation descriptions.</param>
+            <returns>The scopes.</returns>
+        </member>
+        <member name="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGenerator">
+            <summary>Generates a <see cref="T:NSwag.SwaggerService"/> object for the given Web API class type. </summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGenerator.#ctor(NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGeneratorSettings)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGenerator" /> class.</summary>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGenerator.#ctor(NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGeneratorSettings,NSwag.CodeGeneration.SwaggerGenerators.SwaggerJsonSchemaGenerator)">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGenerator" /> class.</summary>
+            <param name="settings">The settings.</param>
+            <param name="schemaGenerator">The schema generator.</param>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGenerator.GetControllerClasses(System.Reflection.Assembly)">
+            <summary>Gets all controller class types of the given assembly.</summary>
+            <param name="assembly">The assembly.</param>
+            <returns>The controller classes.</returns>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGenerator.Settings">
+            <summary>Gets or sets the generator settings.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGenerator.GenerateForController``1(System.String)">
+            <summary>Generates a Swagger specification for the given controller type.</summary>
+            <typeparam name="TController">The type of the controller.</typeparam>
+            <param name="excludedMethodName">The name of the excluded method name.</param>
+            <returns>The <see cref="T:NSwag.SwaggerService" />.</returns>
+            <exception cref="T:System.InvalidOperationException">The operation has more than one body parameter.</exception>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGenerator.GenerateForController(System.Type,System.String)">
+            <summary>Generates a Swagger specification for the given controller type.</summary>
+            <param name="controllerType">The type of the controller.</param>
+            <param name="excludedMethodName">The name of the excluded method name.</param>
+            <returns>The <see cref="T:NSwag.SwaggerService" />.</returns>
+            <exception cref="T:System.InvalidOperationException">The operation has more than one body parameter.</exception>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGenerator.GenerateForControllers(System.Collections.Generic.IEnumerable{System.Type},System.String)">
+            <summary>Generates a Swagger specification for the given controller types.</summary>
+            <param name="controllerTypes">The types of the controller.</param>
+            <param name="excludedMethodName">The name of the excluded method name.</param>
+            <returns>The <see cref="T:NSwag.SwaggerService" />.</returns>
+            <exception cref="T:System.InvalidOperationException">The operation has more than one body parameter.</exception>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGenerator.GenerateForController(NSwag.SwaggerService,System.Type,System.String,NJsonSchema.ISchemaResolver,NJsonSchema.ISchemaDefinitionAppender)">
+            <exception cref="T:System.InvalidOperationException">The operation has more than one body parameter.</exception>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGenerator.LoadParameters(NSwag.SwaggerOperation,System.Collections.Generic.List{System.Reflection.ParameterInfo},System.String,NJsonSchema.ISchemaResolver,NJsonSchema.ISchemaDefinitionAppender)">
+            <exception cref="T:System.InvalidOperationException">The operation has more than one body parameter.</exception>
+        </member>
+        <member name="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGeneratorSettings">
+            <summary>Settings for the <see cref="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGenerator"/>.</summary>
+        </member>
+        <member name="M:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGeneratorSettings.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGeneratorSettings"/> class.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGeneratorSettings.DefaultUrlTemplate">
+            <summary>Gets or sets the default Web API URL template.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGeneratorSettings.Title">
+            <summary>Gets or sets the Swagger specification title.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGeneratorSettings.Description">
+            <summary>Gets or sets the Swagger specification description.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGeneratorSettings.Version">
+            <summary>Gets or sets the Swagger specification version.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGeneratorSettings.OperationProcessors">
+            <summary>Gets the operation processor.</summary>
+        </member>
+        <member name="P:NSwag.CodeGeneration.SwaggerGenerators.WebApi.WebApiToSwaggerGeneratorSettings.DocumentProcessors">
+            <summary>Gets the operation processor.</summary>
+        </member>
+    </members>
+</doc>

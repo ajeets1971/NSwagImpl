@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>NSwag Implementation</h3>
+        <p>
+            The Swagger API toolchain for .NET
+        </p>
+    </div>
+    <div class="col-md-12">
+        <h4>WebApi To Swagger Generator</h4>
+        <p>
+            <input type="button" value="Generate" onclick="location.href='@Url.Action("generateWebApiToSwaggerGenerator", "NSwagUI")'" />
+        </p>
+    </div>
+    <div class="col-md-12">
+        <h4>WebApiAssembly To Swagger Generator</h4>
+        <p>
+            <input type="button" value="Generate" onclick="location.href='@Url.Action("generateWebApiAssemblyToSwaggerGenerator", "NSwagUI")'" />
+        </p>
+    </div>
+    <div class="col-md-12">
+        <h4>Swagger To CSharp Client Generator</h4>
+        @using (Ajax.BeginForm("generateSwaggerToCSharpClientGenerator", "NSwagUI",
+                            new AjaxOptions { UpdateTargetId = "divUrlDetails" }))
+        {            
+            <div id="divUrlDetails">
+                <p>
+                    @Html.Label("Swagger Json Url")
+                    @Html.TextBox("txtUrl")
+                </p>
+                <p>
+                    <button>Generate</button>
+                </p>
+            </div>
+        }
+    </div>
+    <div class="col-md-12">
+        <h4>Swagger To CSharp WebApiController Generator</h4>
+        @using (Ajax.BeginForm("generateSwaggerToCSharpWebApiControllerGenerator", "NSwagUI",
+                            new AjaxOptions { UpdateTargetId = "divUrlDetailsWebApiController" }))
+        {           
+            <div id="divUrlDetailsWebApiController">
+                <p>
+                    @Html.Label("Swagger Json Url")
+                    @Html.TextBox("txtUrlWebApiController")
+                </p>
+                <p>
+                    <button>Generate</button>
+                </p>
+            </div>
+        }
+    </div>
+    <div>
+        <pre>
+        @{
+            var data = "";
+            if (TempData["SwaggerJson"] != null)
+            {
+                data = TempData["SwaggerJson"].ToString().Trim();
+            }
+            else if (TempData["CSharpCode"] != null)
+            {
+                data = TempData["CSharpCode"].ToString().Trim();
+            }  
+        }  
+        @data
+        </pre>
+    </div>
+</div>
