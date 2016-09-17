@@ -12,7 +12,7 @@ namespace SwaggerUi.Controllers
         {
             ViewBag.Title = "Home Page";
 
-            return Redirect("/Help");
+            return Redirect("/NSwagUI");
         }
     }
 }

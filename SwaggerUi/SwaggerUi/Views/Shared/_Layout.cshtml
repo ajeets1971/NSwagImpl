@@ -16,13 +16,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("NSwag Implementation", "Index", "Help", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("NSwag Implementation", "Index", "NSwagUI", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+                <ul class="nav navbar-nav">                    
                     <li>@Html.ActionLink("NSwag Implentation", "Index", "NSwagUI", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("Swagger Help", "Index", "SwaggerHelp", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("ASPNET API Specification", "Index", "Help", new { area = "" }, null)</li>
                 </ul>
             </div>
         </div>
